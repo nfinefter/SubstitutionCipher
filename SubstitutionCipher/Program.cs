@@ -4,6 +4,7 @@ namespace SubstitutionCipher
 {
     class Program
     {
+        
         static string Encrypt(string input, string key, string alphabet)
         {
             string encryptedMsg = "";
@@ -29,14 +30,14 @@ namespace SubstitutionCipher
 
         static string Decrypt(string encrypted, string key, string alphabet)
         {
-            string decrptedMsg = "";
+            string decryptedMsg = "";
 
             for (int i = 0; i < encrypted.Length; i++)
             {
-                decrptedMsg += key[i];
+                decryptedMsg += key[i];
             }
 
-            return decrptedMsg;
+            return decryptedMsg;
         }
 
         static Random rand = new Random();
@@ -91,10 +92,10 @@ namespace SubstitutionCipher
             string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
             string key = MakeKey(alphabet);
-            string encrypt = Encrypt("asdkjasdisaujd", key, alphabet);
+            string encrypt = Encrypt("ZYJHGBN", key, alphabet);
             Console.WriteLine(encrypt);
             Console.WriteLine(Decrypt(encrypt, key, alphabet));
-
+            
         }
     }
 }
